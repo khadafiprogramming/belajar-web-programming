@@ -1,0 +1,455 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Code di atas adalah CSS RESET by Mayer Web */
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.cf {
+    *zoom: 1;
+}
+
+/* Code di atas ini adalah Clear Fix Float by Nicholas Gallagher */
+
+body {
+    font: 16px/25px arial;
+    height: 2000px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
+    border-bottom: 3px solid black;
+    z-index: 9999;
+}
+
+.navbar .help {
+    margin-left: 40px;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    width: 170px;
+    float: left;
+}
+
+.navbar input {
+    width: 400px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 30px;
+    float: left;
+    padding: 5px 60px;
+    border-radius: 10px;
+}
+
+.navbar .profile {
+    background-image: url(img/khadafi1.jpg);
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -13px;
+    border-radius: 50px;
+    float: right;
+    margin-right: 15px;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.container .header {
+    margin-left: 30px;
+}
+
+.container .header ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.container .header ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.container .header ul li a:active {
+    color: blue;
+}
+
+.container .header ul .blogger {
+    float: right;
+}
+
+.container .content {
+    margin-top: 40px;
+}
+
+.container .content .main {
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-left: 120px;
+    width: 800px;
+    float: left;
+    position: relative;
+}
+
+.container .content .main .judul {
+    font-size: 32px;
+    color: #333;
+    margin-top: 70px;
+    margin-left: 60px;
+}
+
+.container .content .main p {
+    margin-left: 60px;
+    margin-top: 17px;
+}
+
+.container .content .main h2 {
+    font-size: 23px;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.container .content .main ol {
+    list-style-type: decimal;
+    margin-left: 60px;
+    margin-top: 10px;
+    line-height: 28px;
+}
+
+b {
+    font-weight: bold;
+}
+
+.content .main a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* SIDEBAR */
+
+
+.container .content .sidebar {
+    width: 400px;
+    position: fixed;
+    top: 175px;
+    right: 130px;
+}
+
+.container .content .sidebar .bantuan {
+    font-weight: bold;
+    color: rgb(85, 81, 81);
+    text-decoration: none;
+}
+
+.content .sidebar .bantuan:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    line-height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.content .main .unordered {
+    list-style-type: disc;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.container .content .github {
+    background-image: url(img/github-logo.png);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.content .sidebar .logo-cat {
+    background-image: url(img/cat.png);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: cover;
+    top: 400px;
+    left: 200px;
+}
+
+.unordered2 {
+    list-style-type: disc;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.container .content .main .subjudul {
+    margin-bottom: -5px;
+}
+
+.container .content .main .masukan {
+    margin-bottom: 30px;
+}
+
+.container .content .main .masukan a {
+    font-size: 13px;
+    margin-top: 25px;
+    color: #333;
+}
+
+.container .content .main .masukan a:hover {
+    text-decoration: underline;
+}
+
+.content .main p.membantu {
+    margin-top: 0;
+    padding: 50px 0;
+    font-weight: bold;
+    color: rgb(96, 91, 91);
+    width: 200px;
+    float: left;
+}
+
+.ya_tidak {
+    margin-top: 50px;
+}
+
+.button {
+    background-color: white;
+    color: blue;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: rgba(51, 156, 236, 0.1);
+}
+
+.button:active {
+    background-color: rgba(51, 156, 236, 0.3);
+}
+
+.thelastbox {
+    border: 1px solid black;
+    position: absolute;
+    top: 1320px;
+    border-radius: 5px;
+    left: 120px;
+    width: 800px;
+    height: 250px;
+    text-align: center;
+}
+
+.thelastbox h2 {
+    font-size: 23px;
+    color: #333;
+    margin-top: 40px;
+}
+
+.thelastbox p {
+    font-size: 14px;
+    color: #333;
+}
+
+.thelastbox .box {
+    border: 1px solid black;
+    width: 270px;
+    height: 70px;
+    text-align: left;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.thelastbox a {
+    text-decoration: none;
+}
+
+.thelastbox .box .satu {
+    font-weight: bold;
+}
+
+.footer {
+    position: absolute;
+    top: 1700px;
+    left: 100px;
+}
+
+.footer .text {
+    font-size: 13px;
+    color: rgb(74, 71, 71);
+}

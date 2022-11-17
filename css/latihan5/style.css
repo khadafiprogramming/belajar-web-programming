@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: red;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p.p1 {
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+p#p2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    word-spacing: 5px;
+    line-height: 20px;
+    text-indent: 50px;
+    text-transform: uppercase;
+}
+
+ul li a {
+    text-decoration: line-through;
+    color: green;
+}
+
+ol li a {
+    color: orange;
+    text-decoration: line-through;
+}

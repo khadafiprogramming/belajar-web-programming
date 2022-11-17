@@ -1,0 +1,9 @@
+ul#berat100 a {
+    color: red;
+}
+
+ul#berat100 a.berat10 {
+    color: goldenrod;
+    font-style: italic;
+    text-decoration: line-through;
+}

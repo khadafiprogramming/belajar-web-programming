@@ -1,0 +1,10 @@
+/* body {
+    background-color: lightblue;
+    background-image: url(bg1.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+} */
+
+body {
+    background: skyblue url(bg1.png) no-repeat top center;
+}

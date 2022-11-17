@@ -1,0 +1,21 @@
+li:nth-child(even) a {
+    color: red;
+}
+
+li:nth-child(odd) a:hover {
+    color: chartreuse;
+    font-size: 30px;
+    text-decoration: line-through;
+}
+
+p:first-of-type {
+    color: purple;
+}
+
+p:last-of-type {
+    color: red;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: line-through;
+}

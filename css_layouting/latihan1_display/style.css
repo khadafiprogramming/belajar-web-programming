@@ -1,0 +1,44 @@
+.navigasi {
+    background-color: black;
+    color: white;
+}
+
+.konten {
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.konten ul.list li {
+    display: inline;
+    color: red;
+}
+
+.list a {
+    color: inherit;
+}
+
+.footer {
+    background-color: cornflowerblue;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inline-block {
+    background-color: red;
+    color: white;
+    display: inline-block;
+}
+
+.tes {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    height: 200px;
+    width: 300px;
+}
+
+.tes2 {
+    background-color: brown;
+    color: white;
+    display: inline-block;
+}

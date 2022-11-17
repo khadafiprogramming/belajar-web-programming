@@ -1,0 +1,296 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Clearfix Float - Nicholas Callagher */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+
+/* CSS ~ Index*/
+body {
+    background-image: url(../../latihan6_membuatweb/img/bg1.png);
+    font: 16px/25px arial;
+}
+
+.container {
+    width: 960px;
+    background-color: white;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+.header .judul {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.header ul li {
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.header ul li a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.header ul li a:visited {
+    color: red;
+}
+
+.header ul li a:hover {
+    font-size: 18px;
+    background-color: darkgoldenrod;
+    padding: 1px;
+    color: aqua;
+}
+
+.hero {
+    background-image: url(../img/hero2.jpg);
+    background-size: cover;
+    background-position: 0 -90px;
+    height: 320px;
+    border-top: 3px darkgreen solid;
+    border-bottom: 3px darkgoldenrod solid;
+}
+
+.content .main {
+    float: left;
+}
+
+.content {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.content .main {
+    width: 600px;
+}
+
+.judul_content {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.content .penulis {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+.content .penulis:hover {
+    color: white;
+    background-color: #333;
+    padding: 3px;
+}
+
+.content p {
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    width: 300px;
+    height: 500px;
+    float: right;
+    overflow: auto;
+}
+
+.sidebar .profile {
+    background-image: url(../img/khadafi1.jpg);
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: 0 -50px;
+    margin-top: 3px;
+    float: left;
+    margin-right: 10px;
+    border: 3px darkgoldenrod solid;
+}
+
+.sidebar .profile:hover {
+    border-radius: 10px;
+    height: 110px;
+    width: 110px;
+    border: 3px darkgreen solid;
+}
+
+.sidebar .penulis_sidebar {
+    font-weight: bold;
+}
+
+.sidebar p {
+    font: 12px/18px arial;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: burlywood;
+}

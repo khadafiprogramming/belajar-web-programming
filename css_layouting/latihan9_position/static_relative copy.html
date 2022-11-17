@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Position Static & Relative</title>
+    <style>
+        .satu,
+        .dua,
+        .tiga {
+            width: 100px;
+            height: 100px;
+        }
+
+        .satu {
+            background-color: lightblue;
+        }
+
+        .dua {
+            background-color: lightcoral;
+            position: relative;
+            top: 30px;
+            left: 30px;
+        }
+
+        .tiga {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<!-- Static adalah posisi default dari tag html -->
+<!-- Relative maksudnya posisi tag html akan naik satu dimensi atau keluar dari flow nya. Namun tempat dia sebelumnya tetap akan ada. -->
+
+<body>
+    <div class="main">
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+    </div>
+</body>
+
+</html>

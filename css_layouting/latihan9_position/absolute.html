@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Position Absolute</title>
+    <style>
+        .satu {
+            background-color: lightblue;
+        }
+
+        .dua {
+            background-color: lightcoral;
+            position: absolute;
+            top: 10px;
+            left: 5px;
+        }
+
+        .tiga {
+            background-color: lightgreen;
+        }
+
+        .container {
+            width: 500px;
+            height: 550px;
+            border: 5px solid black;
+            position: relative;
+        }
+
+        div {
+            margin: auto;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<!-- Absolute -> posisinya akan relative pada parentnya. Jika ingin memberikan parent pada position non-static ini maka harus memberikan css relative {non-static} pada parentnya agar sama dengan dimensi absolute.-->
+
+<body>
+    <div class="container">
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+    </div>
+</body>
+
+</html>

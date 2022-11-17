@@ -1,0 +1,26 @@
+h1 {
+    color: orange;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: line-through;
+    word-spacing: 5px;
+}
+
+h2 {
+    color: green;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+p {
+    text-indent: 50px;
+    word-spacing: 10px;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: brown;
+
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Form</title>
+</head>
+
+<body>
+    <form>
+        <h1>Belajar Menggunakan Tag Form</h1>
+        <hr>
+        <label for="username">Username</label>
+        <input type="text" id="username">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password">
+        <br>
+        <input type="radio" id="laki-laki" name="jenis_kelamin"><label for="laki-laki">Laki-laki</label>
+        <input type="radio" id="wanita" name="jenis_kelamin"><label for="wanita">Wanita</label>
+        <br>
+        <input type="checkbox" id="menyanyi"><label for="menyanyi">Menyanyi</label>
+        <input type="checkbox" id="olahraga"><label for="olahraga">Olahraga</label>
+        <input type="checkbox" id="ngoding"><label for="ngoding">Ngoding</label>
+        <br><br>
+        <label for="textarea">Komentar</label>
+        <textarea id="textarea"></textarea>
+        <br><br>
+        <button type="submit">Kirim</button>
+    </form>
+    <br><br><br>
+    <h2>Latihan :</h2>
+    <form>
+        <table border="0" cellspacing="0" cellpadding="5">
+            <tr>
+                <td><label for="username">Username :</label></td>
+                <td><input type="text" id="username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password :</label></td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="radio" id="laki-laki" name="jenis_kelamin">
+                    <label for="laki-laki">Laki-laki</label>
+                    <input type="radio" id="perempuan" name="jenis_kelamin">
+                    <label for="perempuan">Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="menyanyi">
+                    <label for="menyanyi">Menyanyi</label>
+                    <input type="checkbox" id="olahraga">
+                    <label for="olahraga">Olahraga</label>
+                    <input type="checkbox" id="ngoding">
+                    <label for="ngoding">Ngoding</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="komentar">Komentar</label></td>
+                <td><textarea id="komentar"></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="asal">Asal :</label>
+                </td>
+                <td>
+                    <select id="asal">
+                        <option value="">Kendawangan</option>
+                        <option value="">Ketapang</option>
+                        <option value="">Pontianak</option>
+                        <option value="">Kayong</option>
+                        <option value="">Siduk</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Kirim</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
