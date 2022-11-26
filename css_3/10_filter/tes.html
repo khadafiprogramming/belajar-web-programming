@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan Linear Gradient</title>
+    <title>Latihan Filter</title>
     <style>
-        div {
-            width: 600px;
-            height: 300px;
-            margin: 50px auto;
-            background: linear-gradient(to bottom right, green 30%, red 70%);
+        img {
+            filter: blur(5px) grayscale(100%);
+        }
+
+        img:hover {
+            filter: blur(0) grayscale(0%);
+            transition: .7s;
         }
     </style>
 </head>
 
 <body>
-    <div></div>
+    <img src="img/khadafi1.jpg" alt="">
 </body>
 
 </html>

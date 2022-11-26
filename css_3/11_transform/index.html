@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Menggunakan Property CSS Transform</title>
+    <style>
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to right, purple, lightblue);
+            margin: 200px auto;
+            transition: 1s;
+        }
+
+        .kotak:hover {
+            transform: scale(1.5) rotate(-45deg) translateX(-100px);
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* 
+            scale(angka), scaleX(angka), scaleY(angka) -> memperbesar atau memperkecil skala berkali lipat
+            rotate(deg), rotateX(deg), rotateY(deg) -> merotasi 
+            skew(deg), skewX(deg),skewY(deg) -> menarik sudut
+            translate(px), translateX(px),translateY(px) -> menggeser 
+        */
+    </style>
+</head>
+
+<body>
+    <div class="kotak"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eum, nesciunt aspernatur pariatur in inventore
+        ipsa quam quasi ex suscipit voluptatem, illum vitae quis saepe quaerat. Voluptates at eaque officiis!</p>
+</body>
+
+</html>
