@@ -1,0 +1,289 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* END CSS RESET */
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.cf {
+    *zoom: 1;
+}
+
+/* CSS RESET By Nicholas Gallagher */
+
+
+body {
+    font: 16px/25px arial, serif;
+    background-image: url(../img/bg2.png);
+    color: #333;
+}
+
+.container {
+    width: 960px;
+    background-color: white;
+    margin: auto;
+}
+
+.header h1 {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.header ul {
+    margin-left: 20px;
+}
+
+.header ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+
+.header ul li a:hover {
+    color: gold;
+    font-size: 18px;
+}
+
+.hero {
+    background-image: url(../img/hero2.jpg);
+    width: 960px;
+    height: 350px;
+    border-top: 3px solid darkgoldenrod;
+    border-bottom: 3px solid gold;
+    background-size: cover;
+    background-position: 0 -50px;
+}
+
+.content .main {
+    float: left;
+    width: 600px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.main .judul {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.main .penulis {
+    font-size: 13px;
+    margin-top: -3px;
+    margin-bottom: ;
+}
+
+.main .penulis a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.main .penulis a:hover {
+    color: gold;
+    font-size: 15px;
+}
+
+.main p {
+    margin-bottom: 15px;
+}
+
+.sidebar {
+    width: 300px;
+    float: right;
+    padding-top: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    height: 700px;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar .profile {
+    background-image: url(../img/khadafi1.jpg);
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background-position: 0 -30px;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 5px;
+}
+
+.sidebar p {
+    font: 14px/20px arial;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+}
