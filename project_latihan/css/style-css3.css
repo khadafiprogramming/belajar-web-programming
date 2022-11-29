@@ -1,0 +1,205 @@
+body {
+    background-image: url(../img/bg2.png);
+}
+
+.kotak {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    float: left;
+}
+
+.kotak1 {
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+.kotak2 {
+    border: 5px solid blue;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 50%;
+}
+
+.clear {
+    clear: left;
+}
+
+/* End Border Radius */
+
+.nol {
+    width: 150px;
+    height: 150px;
+}
+
+.satu {
+    background-color: coral;
+    opacity: 0.7;
+    position: relative;
+    margin: 20px;
+}
+
+.dua {
+    background-color: blue;
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    opacity: .7;
+}
+
+/* End Opacity */
+
+
+.tiga {
+    position: relative;
+    margin: 150px 20px;
+    background-color: rgba(255, 102, 0, .7);
+}
+
+.empat {
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    background-color: blue;
+}
+
+.float-left {
+    float: left;
+}
+
+.box1 {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    box-shadow: 0 15px 5px -5px black;
+    margin: 20px;
+    transition: .3s;
+}
+
+.box1:hover {
+    width: 160px;
+    height: 160px;
+    background-color: blue;
+    box-shadow: 0 25px 10px -10px black;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+    background-color: coral;
+    box-shadow: 10px 10px 10px 20px black;
+    transition: .3s;
+    opacity: .7;
+}
+
+.box2:hover {
+    box-shadow: -10px -10px 10px 20px black;
+}
+
+.text-shadow h1 {
+    color: white;
+    font-family: arial;
+    font-style: italic;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 5px 10px 5px black;
+}
+
+.box-linear {
+    width: 600px;
+    height: 300px;
+    background-color: green;
+    margin: 30px auto;
+    background-image: linear-gradient(to right, blue 40%, red 90%);
+}
+
+.box-linear2 {
+    width: 500px;
+    height: 250px;
+    margin: 30px auto;
+    background-image: linear-gradient(45deg, red, blue, green)
+}
+
+.box-linear3 {
+    width: 400px;
+    height: 200px;
+    margin: 30px auto;
+    background: linear-gradient(to right, coral, black, yellow, purple);
+}
+
+.box-radial {
+    width: 500px;
+    height: 250px;
+    margin: 30px auto;
+    background: radial-gradient(circle farthest-corner at top right, red 50%, blue 90%);
+}
+
+.box-radial2 {
+    width: 400px;
+    height: 200px;
+    margin: 30px auto;
+    background: radial-gradient(circle closest-side at 30px 50px, yellow, blue)
+}
+
+.rubik-glitch {
+    font-family: "Rubik Glitch", cursive;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 35px;
+    color: black;
+    text-shadow: 0 10px 10px gold;
+}
+
+.quicksandbold {
+    font-family: 'quicksandbold', arial;
+    font-size: 28px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.ambleregular {
+    font-family: 'ambleregular', arial;
+    font-size: 35px;
+    text-align: center;
+}
+
+.vendor-prefix {
+    text-align: center;
+}
+
+.vendor-prefix img {
+    width: 200px;
+    height: 200px;
+    -webkit-filter: grayscale(100);
+    filter: grayscale(100%);
+}
+
+.filter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.filter img {
+    width: 200px;
+    height: 200px;
+    filter: blur(2px) grayscale(100%) drop-shadow(10px 10px 2px black);
+    transition: 1s;
+}
+
+.filter img:hover {
+    filter: blur(0) grayscale(0) drop-shadow(15px 15px 2px black);
+}
+
+.filter h1 {
+    filter: drop-shadow(5px 5px 1px black);
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    transition: 1s;
+}
+
+.filter h1:hover {
+    font-size: 60px;
+}
