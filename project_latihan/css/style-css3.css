@@ -1,5 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-image: url(../img/bg2.png);
+    /* background: linear-gradient(to right, lightseagreen, purple, lightskyblue); */
+
 }
 
 .kotak {
@@ -129,6 +136,13 @@ body {
     background: linear-gradient(to right, coral, black, yellow, purple);
 }
 
+.box-linear4 {
+    width: 300px;
+    height: 150px;
+    margin: 30px auto;
+    background: linear-gradient(to right, lightseagreen, lightskyblue, lightcoral);
+}
+
 .box-radial {
     width: 500px;
     height: 250px;
@@ -202,4 +216,160 @@ body {
 
 .filter h1:hover {
     font-size: 60px;
+}
+
+.transform {
+    width: 250px;
+    background-color: lightseagreen;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.box-transform {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    box-sizing: border-box;
+    margin: 5px 5px 0;
+    box-sizing: border-box;
+    transition: .5s;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 14px;
+    float: left;
+}
+
+.box-t1 {
+    background-color: coral;
+}
+
+.box-t2 {
+    background-color: cadetblue;
+}
+
+.box-t3 {
+    background-color: rgb(22, 89, 20);
+}
+
+.box-t4 {
+    background-color: rgb(107, 131, 45);
+}
+
+.box-transform:hover {
+    transform: scale(1.1) rotate(45deg) translate(30px);
+    border: 3px solid white;
+    font-size: 18px;
+}
+
+.transition .container {
+    width: 900px;
+    height: 500px;
+    margin: 20px auto;
+    border: 5px solid black;
+}
+
+.kotak-t {
+    width: 70px;
+    height: 70px;
+    background-color: salmon;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.transition .container:hover .kotak-t {
+    transform: rotate(360deg);
+    margin-left: 830px;
+    background-color: blueviolet;
+}
+
+.box-transition1 {
+    transition: ease 2s;
+}
+
+.box-transition2 {
+    transition: ease-in 2s;
+}
+
+.box-transition3 {
+    transition: ease-out 2s;
+}
+
+.box-transition4 {
+    transition: ease 2s;
+}
+
+.box-transition5 {
+    transition: linear 2s;
+}
+
+.box-transition6 {
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s;
+}
+
+.container2 {
+    width: 900px;
+    height: 80px;
+    border: 5px solid black;
+    margin: auto;
+}
+
+.container2:hover .box-transition7 {
+    margin-left: 830px;
+    background-color: cadetblue;
+    transform: rotate(360deg);
+}
+
+.box-transition7 {
+    transition: margin-left 3s 2s, transform 3s 5s, background-color 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 5s;
+}
+
+.animation .container {
+    width: 900px;
+    height: 500px;
+    border: 5px solid black;
+    margin: 10px auto;
+}
+
+.kotak-animasi {
+    width: 70px;
+    height: 70px;
+    background-color: salmon;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;
+    animation-name: kotakAnimasi;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+
+@keyframes kotakAnimasi {
+    0% {
+        margin-left: 0px;
+    }
+
+    40% {
+        margin-left: 800px;
+    }
+
+    60% {
+        margin-left: 800px;
+        margin-top: 300px;
+    }
+
+    80% {
+        margin-left: 10px;
+        margin-top: 400px;
+    }
+
+    100% {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
 }
