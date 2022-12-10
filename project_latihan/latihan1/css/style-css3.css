@@ -30,7 +30,7 @@ body {
 }
 
 .clear {
-    clear: left;
+    clear: both;
 }
 
 /* End Border Radius */
@@ -373,3 +373,11 @@ body {
         margin-top: 10px;
     }
 }
+
+.margin {
+    width: 600px;
+    border: 5px solid black;
+    margin: 50px auto;
+}
+
+.marg li
