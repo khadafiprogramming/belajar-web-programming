@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max width, min width, max height, min height</title>
+    <style>
+        span {
+            background-color: lawngreen;
+            display: block;
+        }
+
+        p {
+            background-color: lightskyblue;
+        }
+
+        .ex1 {
+            min-width: 500px;
+        }
+
+        .ex2 {
+            display: inline-block;
+            min-height: 200px;
+        }
+
+        .ex3 {
+            max-width: 500px;
+        }
+
+        .ex4 {
+            display: inline-block;
+            max-width: 500px;
+        }
+
+        .ex5 {
+            max-height: 100px;
+            margin-bottom: 200px;
+        }
+
+        .ex6 {
+            max-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>min width</h1>
+    <span class="ex1">Min width</span>
+    <hr>
+    <h1>min height</h1>
+    <span class="ex2">Min height</span>
+    <hr>
+    <h1>max width</h1>
+    <!-- valid -->
+    <h2>Valid</h2>
+    <span class="ex3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nobis sed eius, corrupti
+        repudiandae
+        maiores
+        dolores. Sint, perferendis sunt explicabo magni ut ea dolor, consequuntur ipsum error natus suscipit
+        reprehenderit.</span>
+    <!-- invalid -->
+    <h2>invalid</h2>
+    <span class="ex4">Lorem, ipsum dolor.</span>
+
+    <hr>
+    <h1>max-height</h1>
+    <!-- valid -->
+    <h2>Valid</h2>
+    <span class="ex5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex necessitatibus, eius earum nisi, quis
+        quia
+        aliquid rerum eum ad architecto porro unde, laboriosam maiores? Non ab consequatur dolorum ipsam tenetur.
+        Inventore voluptates velit facere temporibus vitae nobis deserunt delectus nam, accusamus dolore? Illo quo vitae
+        magnam! Facilis accusantium ea voluptas magni minima voluptatibus asperiores veritatis quibusdam! Sint velit nam
+        sequi?
+        Libero culpa veniam veritatis eos quidem magnam molestias, sapiente assumenda, nobis aut suscipit? Enim, quis
+        aperiam, inventore quibusdam quas architecto esse saepe iure at error laudantium officiis expedita omnis
+        officia.</span>
+    <h2>Invalid</h2>
+    <span class="ex6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui beatae.</span>
+
+    <hr>
+    <br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.8em;
+}
+
+header {
+    background-color: #ccc;
+    background-image: url(img/keyboard.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+h1 {
+    font-size: 4vmax;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .8);
+    line-height: 1.2em;
+    text-align: center;
+    transition: .5s;
+    margin: auto;
+}
+
+h1:hover {
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .8);
+}
+
+section {
+    width: 80vw;
+    margin: 50px auto;
+}
+
+.detail {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 0.5em;
+}
+
+section p {
+    text-indent: 1.5em;
+    margin: 10px 0 10px 0;
+}
