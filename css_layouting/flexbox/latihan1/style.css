@@ -1,0 +1,90 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65em;
+    background-color: #ddd;
+    padding-bottom: 1000px;
+}
+
+/* Latihan 1 */
+.container-satu {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 1.5em;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+
+/* Akhir Latihan 1 */
+
+/* Latihan 2 */
+.container-dua {
+    max-width: 1000px;
+    background-color: #fff;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.layanan {
+    padding: 2em;
+    box-sizing: inherit;
+    margin-bottom: 10px;
+}
+
+.layanan.satu {
+    background-color: rgb(236, 113, 113);
+}
+
+.layanan.dua {
+    background-color: rgb(110, 110, 236);
+}
+
+.layanan.tiga {
+    background-color: rgb(98, 248, 98);
+}
+
+/* Responsive */
+
+@media (min-width: 800px) {
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layanan {
+        width: 30%;
+    }
+
+    .container-satu {
+        display: flex;
+    }
+
+    .kolom-utama,
+    .sidebar-dua,
+    .sidebar-satu {
+        box-sizing: border-box;
+        margin-left: 20px;
+    }
+}
