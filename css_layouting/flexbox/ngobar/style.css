@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: rgb(125, 22, 125);
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-around;
+    color: rgb(226, 172, 226);
+}
+
+nav .logo {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 40%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(226, 172, 226);
+    font-size: 0.8rem;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+
+/* Menu Hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(226, 172, 226);
+    transition: .5s;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 42px;
+    height: 28px;
+    top: -2px;
+    opacity: 0;
+    cursor: pointer;
+    left: -7px;
+    z-index: 1;
+}
+
+/* Animation Toggle Hamburger */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0%;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: white;
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(0px, 1px);
+    background-color: white;
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+
+
+/* End Menu Hamburger */
+
+
+/* Responsive Breakpoint*/
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgb(125, 22, 125);
+        z-index: -10;
+        width: 60vw;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/*  Ukuran Tablet */
+
+/* End Responsive */

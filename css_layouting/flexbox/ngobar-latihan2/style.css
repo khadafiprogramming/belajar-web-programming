@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    background-color: rgb(215, 203, 203);
+}
+
+nav {
+    height: 50px;
+    background-color: rgb(100, 149, 237);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo h2 {
+    color: rgb(178, 198, 234);
+    font-family: 'Caramel', cursive;
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: rgb(178, 198, 234);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* Button Hamburger */
+.menu-toggle {
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 20px;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 28px;
+    height: 28px;
+    top: -4px;
+    z-index: 999999;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    background-color: rgb(178, 198, 234);
+    width: 28px;
+    height: 3px;
+    transition: 1s;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-2px, 0);
+    transform-origin: 0 0;
+    background-color: white;
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+    transform-origin: 0 100%;
+    background-color: white;
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: translate(-30px);
+    opacity: 0;
+}
+
+/* End Button Hamburger */
+
+/* Responsive */
+/* Tablet */
+@media screen and (max-width:768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:576px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        background-color: cornflowerblue;
+        z-index: -1;
+        min-height: 300px;
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        right: 0;
+        align-items: center;
+        transform: translateX(100%);
+        transition: .8s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
+
+/* End Responsive */
+
+/* Login Form */
+main {
+    position: relative;
+    margin: 30px auto;
+    z-index: -9999;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+}
+
+.login-form {
+    width: 50%;
+    height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.login-form .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 140px;
+    justify-content: space-between;
+}
+
+.login-form .logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.login-form .form-input {
+    width: 300px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    justify-content: space-evenly;
+}
+
+.login-form .form-input input {
+    height: 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.login-form .form-input button {
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    background-image: linear-gradient(45deg, orange, red, purple);
+    color: white;
+    font-weight: 600;
+    font-size: 0.7rem;
+    box-shadow: 0 15px 5px -10px rgba(0, 0, 0, .6);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.login-form .form-input button:hover {
+    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, .7);
+}
+
+.login-form .form-input .forgot-password {
+    text-align: center;
+}
+
+.login-form .form-input .forgot-password a {
+    color: grey;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.login-form .form-input .forgot-password a:hover {
+    color: rgb(35, 33, 33);
+}
+
+.create-account {
+    display: flex;
+    flex-direction: row;
+    width: 240px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.create-account .create {
+    border: 2px solid red;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+
+.create-account .create a {
+    color: red;
+    text-decoration: none;
+    font-size: 0.6rem;
+}
+
+/* End Login Form */
+
+/* Description */
+.description {
+    width: 50%;
+    height: 600px;
+    padding: 170px 30px;
+    text-align: left;
+    color: white;
+    box-sizing: border-box;
+    background: linear-gradient(to right, orange, red, purple);
+}
+
+.description h2 {
+    margin-bottom: 15px;
+}
+
+.description p {
+    font-size: 0.9rem;
+}
+
+/* End Description */
+
+/* Responsive Form Login */
+@media screen and (max-width:850px) {
+    main {
+        flex-direction: column;
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+    }
+}
+
+/* End Responsive Form Login */

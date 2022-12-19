@@ -16,9 +16,8 @@ body {
 }
 
 main {
-    width: 60%;
+    max-width: 800px;
     margin: 50px auto;
-    background-color: lightslategray;
 }
 
 .clear {
@@ -26,7 +25,6 @@ main {
 }
 
 .left {
-    width: 50%;
     background-color: white;
     text-align: center;
     padding: 50px 50px;
@@ -102,7 +100,7 @@ button {
 
 .left,
 .right {
-    float: left;
+    width: 100%;
     height: 550px;
 }
 
@@ -110,7 +108,6 @@ button {
 .right {
     background-image: linear-gradient(to right, orange, red, purple);
     float: left;
-    width: 50%;
     padding: 200px 50px;
     color: rgba(255, 255, 255, 0.985);
 }
@@ -119,4 +116,16 @@ button {
     font-size: 11px;
     margin-top: 15px;
     line-height: 17px;
+}
+
+/* Responsive Media Querry */
+
+@media (min-width:600px) {
+    main {
+        display: flex;
+    }
+
+    section {
+        width: 50%;
+    }
 }
