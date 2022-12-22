@@ -1,0 +1,77 @@
+main {
+    background-color: white;
+    max-width: 1000px;
+}
+
+.info {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+main .product ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product ul li {
+    margin: 30px;
+    box-shadow: 0 2px 10px black;
+    width: 25%;
+    height: 300px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.product ul li img {
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+}
+
+.product ul li span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product ul li span.harga {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.isi {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.isi button {
+    width: 100%;
+    border: none;
+    padding: 5px 0;
+    background: linear-gradient(to right, cornflowerblue, lightcoral, lightgreen);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.isi button:hover {
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Responsive */
+
+@media screen and (max-width:768px) {
+    .product ul li {
+        width: 40%;
+    }
+}
+
+/* @media screen and (max-width:576px) {
+    .product ul li {
+        width: 100%;
+        max-width: 300px;
+        min-width: 300px;
+    }
+} */

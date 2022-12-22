@@ -67,6 +67,8 @@ nav ul li a:hover {
     width: 28px;
     height: 3px;
     transition: 1s;
+    position: relative;
+    z-index: 30;
 }
 
 .menu-toggle input:checked~span:nth-child(2) {
@@ -103,11 +105,10 @@ nav ul li a:hover {
         flex-direction: column;
         width: 40%;
         background-color: cornflowerblue;
-        z-index: -1;
-        min-height: 300px;
+        z-index: 20;
+        height: 100vh;
         position: absolute;
         top: 20px;
-        bottom: 0;
         right: 0;
         align-items: center;
         transform: translateX(100%);
@@ -132,7 +133,7 @@ nav ul li a:hover {
 main {
     position: relative;
     margin: 30px auto;
-    z-index: -9999;
+    z-index: 10;
     max-width: 1000px;
     display: flex;
     align-items: center;

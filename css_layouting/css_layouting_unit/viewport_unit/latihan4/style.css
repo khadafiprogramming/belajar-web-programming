@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.emrem {
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 800px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.typography {
+    margin-top: 20px;
+    gap: 50px;
+    display: flex;
+}
+
+/* em */
+.col-em h2,
+.col-rem h2 {
+    margin-bottom: 20px;
+}
+
+.typography .col-em {
+    font-size: 15px;
+}
+
+.typography .col-em h2 {
+    font-size: 1em;
+}
+
+.typography .col-em p {
+    font-size: 1.5em;
+}
+
+/* End em */
+
+/* rem */
+
+.typography .col-rem {
+    font-size: 20px;
+}
+
+.typography .col-rem h2 {
+    font-size: 2rem;
+}
+
+.typography .col-rem p {
+    font-size: 1.5rem;
+}
+
+/* end rem */
+
+/* Contoh Penggunaan em */
+.btn {
+    padding: 1em 3em;
+    background-color: lightcoral;
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.btn-lg {
+    font-size: 1.5em;
+}
+
+.btn-xl {
+    font-size: 2em;
+}
+
+/* End Contoh Penggunaan em */
+
+/* Eksperimen */
+.eksperimen {
+    font-size: 12px;
+}
+
+.tombol {
+    background-color: lightseagreen;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 1em 3em;
+    margin: 1rem 2rem;
+}
+
+.tombol-sm {
+    font-size: 1em;
+}
+
+.tombol-lg {
+    font-size: 1.5em;
+}
+
+.tombol-xl {
+    font-size: 2em;
+}
+
+/* End Eksperimen */
