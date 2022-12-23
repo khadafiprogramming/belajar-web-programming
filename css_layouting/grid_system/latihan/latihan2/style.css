@@ -1,0 +1,26 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+.container {
+    width: 60%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: 20px 30px;
+    grid-auto-rows: 40px;
+}
+
+.item {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(even) {
+    background-color: rgb(247, 101, 101);
+}

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 1000px;
+    margin: 30px auto;
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.container {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .8);
+    text-align: center;
+}
+
+header {
+    background-color: purple;
+    padding: 40px;
+}
+
+.content::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.sidebar {
+    float: left;
+    width: 40%;
+}
+
+.sidebar aside {
+    background-color: lightskyblue;
+    padding: 60px;
+}
+
+.sidebar nav {
+    background-color: lightcoral;
+    padding: 100px;
+}
+
+main {
+    background: orange;
+    width: 60%;
+    float: right;
+    padding: 168.8px;
+}
+
+footer {
+    background-color: grey;
+    padding: 20px;
+}
