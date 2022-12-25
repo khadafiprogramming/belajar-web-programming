@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Gap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: yellow;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            display: grid;
+            /* grid-template-rows: [satu] 50px [dua] 100px [tiga];
+            grid-template-columns: 1fr 2fr 3fr; */
+
+            grid-template:
+                [satu] 'header header header' 50px
+                [dua] 'sidebar content content' 400px
+                [tiga] 'footer footer footer' 50px / 1fr 2fr 3fr;
+            /* column-gap: 10px;*/
+            /* row-gap: 20px; */
+            gap: 20px 10px;
+        }
+
+        .item {
+            background-color: lightblue;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item:nth-child(even) {
+            /* background-color: lightcoral; */
+        }
+
+        .header {
+            grid-area: header;
+            background-color: blue;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: green;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: white;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: coral;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 576px) {
+            .container {
+                grid-template:
+                    [satu] 'header header header' 50px
+                    [dua] 'sidebar sidebar sidebar' 50px
+                    'content content content' 400px
+                    [tiga] 'footer footer footer' 50px / 1fr 2fr 3fr;
+
+                gap: 5px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item header">1</div>
+        <div class="item header">2</div>
+        <div class="item header">3</div>
+        <div class="item sidebar">4</div>
+        <div class="item content">5</div>
+        <div class="item content">6</div>
+        <div class="item footer">7</div>
+        <div class="item footer">8</div>
+        <div class="item footer">9</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <title>Khadafi Programming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="hero">
+                <h3 class="heading">Khadafi Programming</h3>
+                <p>Set Up Collection</p>
+            </div>
+            <div class="setup-1">
+                <h4 class="name">Set Up Sederhana</h4>
+                <p class="description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="setup-2">
+                <h4 class="name">Set Up Kompleks</h4>
+                <p class="description">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </header>
+
+        <nav class="menu">
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="brand">
+                <h3>Khadafi Programming</h3>
+            </div>
+            <ul class="services">
+                <li class="service"><a href="#">Home</a></li>
+                <li class="service"><a href="#">Products</a></li>
+                <li class="service"><a href="#">About</a></li>
+                <li class="service"><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <section class="features">
+            <div class="feature">
+                <div class="icon">🎧</div>
+                <h4>Music</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquam, maiores quidem delectus quod
+                    nulla.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🎮</div>
+                <h4>Games</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquam, maiores quidem delectus quod
+                    nulla.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">📺</div>
+                <h4>Film</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquam, maiores quidem delectus quod
+                    nulla.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">📷</div>
+                <h4>Foto</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquam, maiores quidem delectus quod
+                    nulla.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">💻</div>
+                <h4>Coding</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aliquam, maiores quidem delectus quod
+                    nulla.</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h1>Gallery</h1>
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+            <img src="https://source.unsplash.com/random/200×200" alt="">
+        </section>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function () {
+            nav.classList.toggle('slide');
+        });
+    </script>
+</body>
+
+</html>
