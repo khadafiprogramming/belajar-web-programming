@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sevillana', cursive;
+    font-size: 18px;
+    background-color: #ddd;
+}
+
+.name {
+    text-align: center;
+    color: black;
+    text-shadow: 0 0 10px black;
+    margin: 30px 0;
+    transition: 1s;
+}
+
+.name:hover {
+    text-shadow: 0 0 black, 0 5px red, 0 10px lightblue, 0 15px lightgreen, 0 20px white, 0 30px black;
+}
+
+.container {
+    max-width: 800px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 5px #000;
+    padding: 20px 0;
+}
+
+.gallery {
+    width: 800px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery li {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px #000;
+    overflow: hidden;
+}
+
+.gallery span {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, .5);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 120px;
+    color: black;
+    text-shadow: 2px 2px 5px #fff;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: .5s;
+}
+
+.gallery a:hover span {
+    opacity: 1;
+    color: white;
+}
+
+/* Overlay */
+
+.overlay {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    right: 0;
+    bottom: 0;
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 0 0 15px 2px #fff;
+}
+
+.overlay .close {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -30px;
+    box-shadow: 0 0 10px 2px white;
+}
+
+.overlay .next {
+    background-image: url(img/icon/right.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 500px;
+    display: inline-block;
+}
+
+.overlay .prev {
+    background-image: url(img/icon/left.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 500px;
+    display: inline-block;
+}
+
+
+/* Animations */
+.overlay>* {
+    opacity: 0;
+}
+
+.overlay:target>* {
+    animation: myOverlay 1s .3s forwards;
+}
+
+@keyframes myOverlay {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

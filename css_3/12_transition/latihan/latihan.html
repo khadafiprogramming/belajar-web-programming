@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Transition 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            min-height: 500px;
+            margin: 30px auto;
+            border: 2px solid black;
+        }
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            color: white;
+            line-height: 100px;
+            text-align: center;
+            font-size: 2em;
+            background: linear-gradient(to right, lightblue, blue, red);
+            transition: transform 2s 4s, margin-left 3s 2s;
+        }
+
+        .container:hover .kotak {
+            transform: rotate(360deg);
+            margin-left: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="kotak kotak1">kotak</div>
+    </div>
+</body>
+
+</html>

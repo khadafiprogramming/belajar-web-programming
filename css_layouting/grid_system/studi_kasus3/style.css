@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Sevillana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sevillana', cursive;
+    font-size: 18px;
+    background-color: #ddd;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+
+/* HEADER */
+header {
+    background-color: dodgerblue;
+    padding: 30px;
+}
+
+header h1 {
+    font-family: 'Rubik Bubbles', cursive;
+    text-align: center;
+    text-shadow: 0 0 5px #000;
+    letter-spacing: 2px;
+}
+
+/* GALLERY */
+section.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+/* GAMBAR HIGHLIGHT */
+.highlight {
+    display: grid;
+    grid-template-areas:
+        'hero hero item-satu'
+        'hero hero item-dua';
+    grid-template-columns: 2fr 1fr;
+}
+
+.hero {
+    background-image: url(img/hero.jpg);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.hero h2 {
+    font-size: 2em;
+}
+
+.hero h2,
+.hero p {
+    background-color: black;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    padding: 5px;
+}
+
+.item {
+    display: grid;
+    list-style: none;
+}
+
+.item-satu,
+.item-dua {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .8);
+}
+
+.item-satu {
+    background-image: url(img/item1.jpg);
+}
+
+.item-dua {
+    background-image: url(img/item2.jpg);
+}
+
+.tema {
+    font-size: 1.8em;
+}
+
+.sub-tema {
+    font-size: 1.2em;
+}
+
+/* COPYRIGHT */
+footer {
+    background-color: rebeccapurple;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}

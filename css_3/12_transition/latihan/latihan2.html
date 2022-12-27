@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            min-height: 500px;
+            margin: 30px auto;
+            border: 3px solid black;
+        }
+
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background-color: lightslategrey;
+            color: white;
+            font-size: 2em;
+            display: flex;
+            animation: belajarAnimasi 3s ease 2s 4 normal forwards;
+        }
+
+        /* animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state]  */
+
+        span {
+            margin: auto;
+        }
+
+        @keyframes belajarAnimasi {
+            0% {
+                width: 200px;
+            }
+
+            50% {
+                width: 200px;
+                height: 500px;
+            }
+
+            100% {
+                width: 300px;
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="kotak"><span>Kotak</span></div>
+    </div>
+</body>
+
+</html>
