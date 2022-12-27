@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sevillana', cursive;
+    font-size: 18px;
+    background-color: #ddd;
+}
+
+.judul {
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 0 0 5px black;
+}
+
+.container {
+    max-width: 800px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 15px;
+    border: 3px solid black;
+    box-shadow: 0 0 10px #000;
+}
+
+.gallery {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery li {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.gallery li span {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 120px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: .8s;
+    transform: scale(0) rotate(0);
+    border-radius: 50%;
+}
+
+.gallery a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+.gallery li a {
+    color: black;
+    display: flex;
+}
+
+/* overlay */
+.overlay {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 9;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    right: 50px;
+    bottom: 50px;
+}
+
+.overlay img {
+    max-height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, .7);
+}
+
+.overlay .close {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    position: absolute;
+    top: 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 2px solid white;
+    box-shadow: 0 0 20px 10px black;
+    left: 50%;
+    margin-left: -30px;
+}
+
+.overlay .next {
+    background-image: url(img/icon/right.png);
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -50px;
+    right: 500px;
+    position: absolute;
+}
+
+.overlay .prev {
+    background-image: url(img/icon/left.png);
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -50px;
+    left: 500px;
+    position: absolute;
+}
+
+/* Animation */
+
+.overlay:target,
+.overlay:target>* {
+    animation: myOverlay .8s;
+}
+
+@keyframes myOverlay {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Content */
+
+section.contents {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    padding: 10px;
+}
+
+.content {
+    flex: 1;
+}
+
+.content h2 {
+    text-align: center;
+    text-shadow: 0 0 20px black;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2rem;
+}
+
+.content.content-2 {
+    flex: 2;
+    text-align: justify;
+}
+
+.content.content-3 {
+    text-align: right;
+}

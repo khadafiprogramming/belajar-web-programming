@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ddd;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    background-color: rgb(115, 101, 18);
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+nav .judul {
+    color: rgb(177, 159, 60);
+    font-size: 1.3rem;
+}
+
+nav .menu {
+    display: flex;
+    width: 40%;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: rgb(177, 159, 60);
+    transition: .5s;
+}
+
+nav .menu a:hover {
+    color: rgb(227, 213, 131);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+}
+
+.hamburger-menu span {
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(177, 159, 60);
+    transition: 1s;
+}
+
+.hamburger-menu input {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    margin-top: -4px;
+    margin-left: -11px;
+    opacity: 0;
+    z-index: 9;
+}
+
+.hamburger-menu:nth-child(3) {
+    opacity: 1;
+}
+
+.hamburger-menu input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(2px, -1px);
+    transform-origin: 0 -100%;
+    background-color: white;
+}
+
+.hamburger-menu input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(1px, 0);
+    transform-origin: 0 100%;
+    background-color: white;
+}
+
+.hamburger-menu input:checked~span:nth-child(3) {
+    transform: translateX(-40px);
+    transform-origin: 0 100%;
+    opacity: 0;
+    background-color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    nav .menu {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav ul.menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgb(115, 101, 18);
+        z-index: 9;
+        position: absolute;
+        width: 40%;
+        height: calc(100vh - 60px);
+        bottom: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: 1s;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+
+
+/* HOME */
+.gallery {
+    max-width: 800px;
+    width: calc(100vw - 10px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.tema {
+    text-align: center;
+    padding: 30px 0;
+    color: white;
+    text-shadow: 0 0 7px #000;
+}
+
+.gallery ul {
+    max-width: inherit;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery ul li {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery a img {
+    width: 120px;
+    height: 120px;
+}
+
+.gallery a span {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, .5);
+    display: inline-block;
+    position: absolute;
+    transform: scale(0) rotate(0);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transition: .5s;
+}
+
+.gallery a {
+    color: white;
+    line-height: 120px;
+}
+
+.gallery a:hover span {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: 9999;
+    text-align: center;
+    padding: 100px 0;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.overlay:target {
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+}
+
+.overlay img {
+    max-height: 100%;
+}
+
+.overlay a {
+    line-height: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -30px;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px white;
+}
+
+/* Animation */
+.overlay:target,
+.overlay:target>* {
+    animation: myOverlay 1s .1s forwards;
+}
+
+@keyframes myOverlay {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
