@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Merriweather:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #ddd;
+    margin: 30px;
+}
+
+.container {
+    display: grid;
+}
+
+/* Navigasi */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    align-items: center;
+}
+
+.menu ul li a {
+    color: white;
+    display: block;
+    background-color: black;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.menu ul li a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .5);
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-areas:
+        'hero hero feature-1'
+        'hero hero feature-2';
+    min-height: 400px;
+    margin-top: 10px;
+}
+
+.hero {
+    grid-area: hero;
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.hero .brand {
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 0.9rem;
+}
+
+.hero>* {
+    background-color: rgb(0, 0, 0, .6);
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+
+.hero>*:hover {
+    background-color: rgb(255, 255, 255, .6);
+    color: black;
+}
+
+.feature {
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.feature-1 {
+    background-image: url(img/item1.jpg);
+}
+
+.feature-2 {
+    background-image: url(img/item2.jpg);
+}
+
+.feature .desc {
+    background-color: rgba(0, 0, 0, 0.566);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.feature p {
+    font-size: 0.9rem;
+}
+
+.feature .desc:hover {
+    background-color: rgb(255, 255, 255, .6);
+    color: black;
+}
+
+/* Features */
+.services {
+    margin-top: 15px;
+}
+
+.services ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.services ul .feature {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+.feature .icon {
+    font-size: 2rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 50px;
+}
+
+.gallery h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.gallery ul {
+    margin-top: 10px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: .8rem;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ddd;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width:1024px) {
+    .menu {
+        grid-template-columns: 1fr;
+        margin-top: 5px;
+    }
+
+    .menu .logo {
+        display: none;
+    }
+
+    .hero>* {
+        display: inherit;
+    }
+
+    header {
+        order: -1;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu ul {
+        display: flex;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.689);
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .menu ul li {
+        width: 100px;
+    }
+
+    .menu ul li a {
+        background-color: rgba(255, 255, 255, 0.781);
+        color: black;
+    }
+
+    .menu .menu-toggle {
+        display: flex;
+        z-index: 999;
+    }
+
+    .header {
+        order: inherit;
+        margin-top: 5px;
+    }
+
+    .menu ul.slide {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        grid-template-areas:
+            'hero'
+            'feature-1'
+            'feature-2';
+    }
+
+    .services ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 17px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    transition: .3s;
+}
+
+.menu-toggle input {
+    position: absolute;
+    top: -5px;
+    left: -1px;
+    opacity: 0;
+    height: 27px;
+    width: 27px;
+    z-index: 1;
+}
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 10% -50%;
+}
+
+.menu-toggle span:nth-child(3) {
+    opacity: 1;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 120%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(0, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg);
+}
