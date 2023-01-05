@@ -1,0 +1,50 @@
+html {
+    position: relative;
+}
+
+body {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.jumbotron img {
+    /* width: 400px; */
+    border: 5px solid #333;
+}
+
+hr {
+    border-top: 3px solid #999;
+    width: 200px;
+}
+
+section {
+    min-height: 500px;
+}
+
+footer {
+    height: 100px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ddd;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
