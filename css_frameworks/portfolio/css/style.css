@@ -7,14 +7,61 @@ body {
     margin-top: 50px;
 }
 
+.jumbotron {
+    background-image: url(../img/header-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -200px;
+    overflow: hidden;
+}
+
 .jumbotron img {
     /* width: 400px; */
-    border: 5px solid #333;
+    border: 5px solid #eaeaea;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+.jumbotron h1,
+.jumbotron p {
+    color: #eaeaea;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
 }
 
 hr {
     border-top: 3px solid #999;
     width: 200px;
+}
+
+.pKiri,
+.pKanan {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1s;
+}
+
+.pKanan {
+    transform: translate(50px, 0);
+}
+
+.pKiri.pMuncul,
+.pKanan.pMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.portfolio {
+    background-color: #eee;
+}
+
+.portfolio .thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .5s;
+}
+
+.portfolio .thumbnail.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 section {
